@@ -3,6 +3,8 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
+I am Ahn Bustamante and I want to create an app that will enable users view and book cinema tickets online and pay using paypal in the comfort of their homes.
+
 Things you may want to cover:
 
 * Ruby version
