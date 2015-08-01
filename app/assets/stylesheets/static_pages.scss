@@ -1,3 +1,27 @@
-// Place all the styles related to the static_pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+h1 {
+	font: 50px 'Roboto400', sans-serif;
+	font-weight: 400;
+	color: white;
+	margin-bottom: 10px;
+	padding: 20px 20px 5px 20px;
+}
+
+h2 {
+	font: 1.3em 'Roboto400', sans-serif;
+	font-weight: normal;
+	color: white;
+	padding: 10px 10px 10px 20px;
+}
+
+html {
+	background-color: #2A1145;
+}
+
+/* -------- Sections ---------*/
+
+.header {
+	background-color: #2A1145;
+}
+
