@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'static_pages/cinemas'
+
+  get 'static_pages/movies'
+
+  get 'static_pages/promoevents'
+
   get 'static_pages/contact'
 
   get 'static_pages/about'

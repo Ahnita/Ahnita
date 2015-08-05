@@ -1,25 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+	<meta charset="utf-8">
+   	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <!-- ***********CSS************** -->
+
+<!-- ********fonts********* -->
 
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,100italic,300italic,500,700' rel='stylesheet' type='text/css'>
 
+<!-- ******bootstrap**** -->
+
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/normalize.css" rel="stylesheet">
+<link href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css" rel ="stylesheet">
+<link href="https://code.jquery.com/ui/1.9.0/themes/smoothness/jquery-ui.css" rel ="stylesheet">
 
-
-  <title>Berlin Bikes</title>
+  <title>Modern Manila Movies</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="menu-header">
+		<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header page-scroll">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+						<span class="sr only"> </span>
+              			<span class="icon-bar"></span>
+              			<span class="icon-bar"></span>
+              			<span class="icon-bar"></span>
+					</button>
+					<a class="site-title" href="/static_pages/index">
+					Moderne Manila Movies<!-- site name -->
+					</a>
+				</div> <!-- end of navbar page-scroll -->
+
+				<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+					<!-- Menu -->
+					<ul class="nav navbar-nav">
+						<li><a href="/static_pages/movies">Movies</a></li>
+						<li><a href="/static_pages/cinemas">Cinemas</a></li>
+						<li><a href="/static_pages/promoevents">Promo/Events</a></li>
+						<li><a href="/static_pages/contact">Contact</a></li>
+					</ul><!-- End Menu -->
+				</div> <!-- end of collapse navbar-collapse -->
+			</div> <!-- end of container -->
+		</nav> <!-- end of navbar -->
+	</div>  <!-- end of menu-header -->
+       	
 	<div class="header">
-		<h1>Welcome to Bike Berlin</h1>
-		<h2>Your source for used bikes in Berlin</h2>
-		<%= image_tag("bike1.jpg") %>
-	</div>
+		<h1>Welcome to Moderne Manila Movies</h1>
+		<h2>Your one stop movie reservation guide in Manila</h2>
+		<div class = "row">
+			<div class = "col-md-8 col-xs-12">
+				
+			</div> <!-- end of column -->
+	</div> <!-- end of header -->	
+
 <%= yield %>
 
 </body>

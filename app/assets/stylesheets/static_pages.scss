@@ -15,13 +15,100 @@ h2 {
 	padding: 10px 10px 10px 20px;
 }
 
+p {
+	font: 1.0 'Roboto400', sans-serif;
+	font-weight: normal;
+	color: white;
+	padding: 10px 10px 10px 20px
+}
 html {
 	background-color: #2A1145;
 }
 
-/* -------- Sections ---------*/
+
+/*====================Nav Bar===========================*/
+.site-title a {
+	padding: 10px 10px 10px 10px;
+	margin: 10px 10px 10px;
+}
+
+.menu-header {
+	background:#000; 
+	position: fixed;
+	z-index: 9999;
+}
+
+.button {
+	background-color: #fff;
+}
+.navbar {
+	border:none !important;
+}
+
+.navbar a {
+	color: #fff;
+	font: 1.3em 'Roboto400', sans-serif;
+}
+
+.navbar-custom a {
+    color: #fff;
+}
+
+.navbar-custom .nav li a {
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+}
+
+.navbar-custom .nav li a:focus {
+	outline: 0;
+	color: #fff;
+}
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li.active {
+    outline: 0;
+    background-color: #A858FF;
+	color: #2A1145;
+}
+
+.page .nav  a {
+	color:#363636;
+}
+
+.page .nav .dropdown-menu  a {
+	color:#fff;
+	background: #000;
+}
+
+.page .top-nav-collapse a {
+	color:#fff;
+}
+
+.top-nav-collapse {
+	background: #000;
+}
+
+.site-title {
+    font-weight: 700;
+	font-size: 24px;
+	line-height: 48px;
+    margin-left: 15px;
+}
+
+.page .site-title  {
+	color:#363636;
+}
+
+.site-title:hover {
+	text-decoration:none;
+}
+
+/* -------- Header Section ---------*/
 
 .header {
 	background-color: #2A1145;
 }
-
+.timestamp {
+	float: right;
+	padding: 10px 20px 10px 10px
+}
