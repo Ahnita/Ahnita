@@ -1,5 +1,4 @@
 
-
 h1 {
 	font: 50px 'Roboto400', sans-serif;
 	font-weight: 400;
@@ -11,14 +10,22 @@ h1 {
 h2 {
 	font: 1.3em 'Roboto400', sans-serif;
 	font-weight: normal;
-	color: white;
+	color: #fff;
 	padding: 10px 10px 10px 20px;
+}
+
+h3 {
+	color: #2A1145;
+}
+
+h3.timestamp {
+	color: #fff;
 }
 
 p {
 	font: 1.0 'Roboto400', sans-serif;
 	font-weight: normal;
-	color: white;
+	color: #2A1145;
 	padding: 10px 10px 10px 20px
 }
 html {
@@ -111,4 +118,28 @@ html {
 .timestamp {
 	float: right;
 	padding: 10px 20px 10px 10px
+}
+
+.select-style select {
+	-webkit-appearance: button;
+    -moz-appearance: button;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-padding-end: 20px;
+    -moz-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -moz-padding-start: 2px;
+    background-color: #FFF; /* fallback color if gradients are not supported */
+    color: #2A1145;
+    font-size: inherit;
+    margin: 0;
+    overflow: hidden;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    border-style: solid;
+    border-width: 2px;
+
 }

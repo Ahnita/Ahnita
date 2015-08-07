@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'static_pages/booking'
+
+  get 'static_pages/book'
+
   get 'static_pages/cinemas'
 
   get 'static_pages/movies'

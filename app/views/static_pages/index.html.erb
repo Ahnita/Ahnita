@@ -1,2 +1,58 @@
-<p class = "timestamp">Welcome! The date and time is <%= Time.now %></p>
+<div class="jumbotron">
+      <div id="carousel-ahnita" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-ahnita" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-ahnita" data-slide-to="1"></li>
+            <li data-target="#carousel-ahnita" data-slide-to="2"></li>
+            <li data-target="#carousel-ahnita" data-slide-to="3"></li>
+          </ol>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <%= image_tag("La Grande Bellezza.jpg", :size => "1920x1080", :alt => "La Grande Bellezza") %>
+                <div class="carousel-caption">
+                  <h1>La Grande Belleza</h1>
+                  <p>Now showing</p>
+                </div>
+            </div>
+
+            <div class="item">
+              <%= image_tag("The Black Swan.jpg", :size => "1920x1080", :alt => "The Black Swan") %>
+                <div class="carousel-caption">
+                <h1>The Black Swan</h1>
+                <p>Now Showing</p> 
+                </div>
+            </div>
+
+            <div class="item">
+              <%= image_tag("Johnny English.jpg", :size => "1920x1080", :alt => "Johnny English") %>
+                <div class="carousel-caption">
+                <h1></h1>
+                <p></p>
+                </div>
+            </div> <!-- end of item -->
+
+            <div class="item">
+              <%= image_tag("The Broken.jpg", :size => "1920x1080", :alt => "The Broken") %>
+                <div class="carousel-caption">
+                  <h1>The Broken</h1>
+                  <p></p>
+                </div>
+            </div>
+        </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-ahnita" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-ahnita" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    </div>
+  </div> <!-- Jumbotron -->
 
