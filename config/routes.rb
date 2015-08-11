@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :products
   get 'static_pages/booking'
 
   get 'static_pages/book'
