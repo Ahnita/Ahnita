@@ -5,6 +5,7 @@ class CreateProducts < ActiveRecord::Migration
       t.string :cinema
       t.string :time
       t.string :day
+      t.string :price
 
       t.timestamps null: false
     end
