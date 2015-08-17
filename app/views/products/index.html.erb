@@ -14,9 +14,8 @@
     <% @products.each do |product| %>
     <tr>
         <td><%= product.movie%></td>
-        <td><%= product.time %></td>
+        <td><%= product.screening %></td>
         <td><%= product.cinema %></td>
-        <td><%= product.day %></td>
         <td><%= product.movieprice %></td>
         <td class = "links"><%= link_to 'Show', product =%></td>
         <td class = "links"><%= link_to 'Edit', edit_product_path(product) %></td>
