@@ -1,6 +1,7 @@
 class cinema < ActiveRecord::Base
-  has_many :theatres
+  has_many :theaters
   has_many :seats
-  belongs_to :movie
+  has_many :screening
+  belongs_to :product
   
 end
