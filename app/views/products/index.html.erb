@@ -11,6 +11,8 @@
       <th colspan="4"></th>
     </tr>
     <% @products.each do |product| %>
+      <%= render partial: "product", locals: {product:product} %>
+    <% end %>
     <tr>
         <td><%= product.movie%></td>
         <td><%= product.screening %></td>
