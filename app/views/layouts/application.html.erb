@@ -32,18 +32,17 @@
               			<span class="icon-bar"></span>
               			<span class="icon-bar"></span>
 					</button>
-					<a class="site-title" href="/static_pages/index">
-					Moderne Manila Movies<!-- site name -->
-					</a>
+					<%= link_to "Moderne Manila Movies", static_pages_index_path %><!-- site name -->
+					
 				</div> <!-- end of navbar page-scroll -->
 
 				<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
 					<!-- Menu -->
 					<ul class="nav navbar-nav">
-						<li><a href="/static_pages/movies">Movies</a></li>
-						<li><a href="/static_pages/cinemas">Cinemas</a></li>
-						<li><a href="/static_pages/promoevents">Promo/Events</a></li>
-						<li><a href="/static_pages/contact">Contact</a></li>
+						<li><%= link_to "Movies", static_pages_movies_path %></li>
+						<li><%= link_to "Cinemas", static_pages_cinemas_path %></li>
+						<li><%= link_to "Promo/Events", static_pages_promoevents_path %></li>
+						<li><%= link_to "Contact", static_pages_contact_path %></li>
 					</ul><!-- End Menu -->
 				</div> <!-- end of collapse navbar-collapse -->
 			</div> <!-- end of container -->
@@ -59,10 +58,10 @@
 				<div class = "select-style">
 					<select id = "movie">
 						<option value>Select Movie</option>
-						<option value = "movie">Johnny English</option>
-						<option value = "movie">Black Swan</option>
-						<option value = "movie">The Broken</option>
-						<option value = "movie">La Grande Bellezza</option>
+						<option><%= link_to "Johnny English", products_index_path(1) %></option>
+						<option><%= link_to "Black Swan", products_index_path(2) %></option>
+						<option><%= link_to "The Broken", products_index_path(3) %></option>
+						<option><%= link_to "La Grande Bellezza", products_index_path(4) %></option>
 					</select>
 				</div> <!-- end of select-style -->
 			</div> <!-- end of col -->
@@ -80,8 +79,8 @@
 			<div class = "col-md-2">
 				<div class = "select-style">
 					<select id = "day">
-						<option value><h3>Select day<span class="glyphicon glyphicon-chevron-down"></span></h3></option>
-						<option value = "day">8 / 01 / 2015</option>
+						<option value><h3>Select Screening<span class="glyphicon glyphicon-chevron-down"></span></h3></option>
+						<option value = "day">8 / 01 / 2015 </option>
 						<option value = "day">8 / 02 / 2015</option>
 						<option value = "day">8 / 03 / 2015</option>
 						<option value = "day">8 / 04 / 2015</option>
@@ -100,7 +99,7 @@
 				</div> <!-- end of select-style -->
 			</div> <!-- end of col -->
 			<div class = "col-md-3">
-					<button type="bookbutton" class="btn btn-warning" data-target="/static_pages/booking">Book Now</button>
+					<button type="bookbutton" class="btn btn-warning"><%= link_to "Book Now", orders_new_path(1) %></button>
 				</div> <!-- end of select-style -->
 			</div> <!-- end of col -->
 		</div> <!-- end of filters -->
