@@ -8,7 +8,7 @@ h1 {
 }
 
 h2 {
-	font: 1.3em 'Roboto400', sans-serif;
+	font: 1.2em 'Roboto400', sans-serif;
 	font-weight: normal;
 	color: #fff;
 	padding: 10px 10px 10px 20px;
@@ -110,6 +110,27 @@ html {
 	text-decoration:none;
 }
 
+li.searchbox {
+	font: 1.2em 'Roboto400', sans-serif;
+	font-weight: normal;
+	color: #fff;
+	padding: 5px;
+}
+
+searchbutton {
+	width: 10px;
+	font: 1.0em 'Roboto400', sans-serif;
+	font-weight: normal;
+	color: #000;
+
+}
+
+searchtext {
+	width: 10px;
+	font-weight: normal;
+	color: #000;
+}
+
 /* -------- Header Section ---------*/
 
 .header {
@@ -143,3 +164,9 @@ html {
     border-width: 2px;
 
 }
+
+/* -----------  Carousel -----------*/
+
+.style-image {
+	width: 100%;
+} 

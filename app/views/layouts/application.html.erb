@@ -43,6 +43,13 @@
 						<li><%= link_to "Cinemas", static_pages_cinemas_path %></li>
 						<li><%= link_to "Promo/Events", static_pages_promoevents_path %></li>
 						<li><%= link_to "Contact", static_pages_contact_path %></li>
+						<li class = "searchbox">
+							<%= form_tag("/products", method: "get") do %>
+							  <%= label_tag(:q, 'Search for:') %>
+							  <searchtext><%= text_field_tag(:q) %></searchtext>
+							  <searchbutton><%= submit_tag("Search") %></searchbutton>
+							<% end %>
+						</li>
 					</ul><!-- End Menu -->
 				</div> <!-- end of collapse navbar-collapse -->
 			</div> <!-- end of container -->
