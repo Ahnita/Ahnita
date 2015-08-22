@@ -3,8 +3,13 @@ h1 {
 	font: 50px 'Roboto400', sans-serif;
 	font-weight: 400;
 	color: white;
-	margin-bottom: 10px;
-	padding: 20px 20px 5px 20px;
+	padding: 10px 10px 20px 10px;
+}
+h1.contact_us {
+	font: 50px 'Roboto400', sans-serif;
+	font-weight: 200;
+	color: #000;
+	padding: 10px 10px 5px 10px;
 }
 
 h2 {
@@ -170,3 +175,24 @@ searchtext {
 .style-image {
 	width: 100%;
 } 
+
+/* ---------- Contact Us ------------*/
+
+.form-control {
+	padding: 10px 10px 10px 10px;
+}
+
+.row_contact {
+	padding: 20px 20px 20px 20px;
+	width: 75%;
+}
+
+submit {
+	padding: 10px 10px 10px 5px;
+	color:  #f3b233;
+	width: 100%;
+}
+
+.mail-form-text {
+  height: 100px 
+}
