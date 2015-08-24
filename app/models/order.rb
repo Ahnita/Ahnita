@@ -1,6 +1,5 @@
 class Order < ActiveRecord::Base
-  belongs_to :screening
-  belongs_to :seat
+  belongs_to :product
   belongs_to :user
   
 

@@ -43,6 +43,15 @@
 						<li><%= link_to "Cinemas", static_pages_cinemas_path %></li>
 						<li><%= link_to "Promo/Events", static_pages_promoevents_path %></li>
 						<li><%= link_to "Contact", static_pages_contact_path %></li>
+						<% if user_signed_in? %>
+						<li>
+							<%= link_to('Logout', destroy_user_session_path) %>
+						</li>
+						<% else %>
+						<li>
+							<%= link_to('Login', new_user_session_path) %>
+						</li>
+						<% end %>
 						<li class = "searchbox">
 							<%= form_tag("/products", method: "get") do %>
 							  <%= label_tag(:q, 'Search for:') %>
@@ -60,6 +69,10 @@
 		<h1>Welcome to Moderne Manila Movies</h1>
 		<h3 class = "timestamp">Welcome! The date and time is <%= Time.now %></h3>
 		<h2>Your one stop movie reservation guide in Manila</h2>
+	
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+
 		<div class = "filters">
 			<div class = "col-md-2">
 				<div class = "select-style">
