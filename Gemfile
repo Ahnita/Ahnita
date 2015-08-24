@@ -25,6 +25,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #Devise - for passwords
 gem 'devise'
 
+#Plugin for devise to reject weak passwords, using zxcvbn-ruby which is a ruby port of zxcvbn: realistic password strength estimation
+gem 'devise_zxcvbn'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

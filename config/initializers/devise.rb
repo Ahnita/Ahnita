@@ -246,6 +246,9 @@ Devise.setup do |config|
   #   manager.default_strategies(scope: :user).unshift :some_external_strategy
   # end
 
+  #Devise default parameters, taken from https://github.com/bitzesty/devise_zxcvbn. A score less than 3 is not recommended
+  config.min_password_score = 4
+
   # ==> Mountable engine configurations
   # When using Devise inside an engine, let's call it `MyEngine`, and this engine
   # is mountable, there are some extra configurations to be taken into account.
