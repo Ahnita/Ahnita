@@ -34,6 +34,10 @@ gem 'devise_security_extension'
 #rails_email_validator
 gem 'rails_email_validator'
 
+#CanCanCan is an updated version of CanCan, a great Authorization gem by Ryan Bates (of RailsCasts fame).
+gem 'cancancan', '~> 1.10'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
