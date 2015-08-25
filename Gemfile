@@ -28,6 +28,12 @@ gem 'devise'
 #Plugin for devise to reject weak passwords, using zxcvbn-ruby which is a ruby port of zxcvbn: realistic password strength estimation
 gem 'devise_zxcvbn'
 
+#Devise Security Extension works with Devise on Rails 3.2 onwards. You can add it to your Gemfile after you successfully set up Devise (see Devise documentation) with:
+gem 'devise_security_extension'
+
+#rails_email_validator
+gem 'rails_email_validator'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

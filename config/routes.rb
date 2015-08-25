@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, :path => '', :path_names => {:sign_in =>'login', :sign_out =>'logout'}
+  
   resources :users
   get 'static_pages/landing_page'
 
@@ -40,6 +40,11 @@ Rails.application.routes.draw do
 
   # Routes for Orders
    resources :products, :orders, only: [:index, :show, :new, :create]
+
+  #Routes for Login
+  devise_for :users, :path => '', :path_names => {:sign_in =>'login', :sign_out =>'logout'}
+  resources :users
+ 
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
