@@ -28,6 +28,9 @@ gem 'devise'
 #Plugin for devise to reject weak passwords, using zxcvbn-ruby which is a ruby port of zxcvbn: realistic password strength estimation
 gem 'devise_zxcvbn'
 
+#CanCanCan is an updated version of CanCan, a great Authorization gem by Ryan Bates (of RailsCasts fame)
+gem 'cancancan'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
