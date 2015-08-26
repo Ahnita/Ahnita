@@ -52,6 +52,15 @@
 							<%= link_to('Login', new_user_session_path) %>
 						</li>
 						<% end %>
+						<% if user_signed_in? %>
+  						<li>
+  						<%= link_to('Edit Profile', edit_user_registration_path) %>
+  						</li>
+						<% else %>
+  						<li>
+  						<%= link_to('Register', new_user_registration_path)  %>
+  						</li>
+						<% end %>
 						<li class = "searchbox">
 							<%= form_tag("/products", method: "get") do %>
 							  <%= label_tag(:q, 'Search for:') %>
@@ -59,6 +68,7 @@
 							  <searchbutton><%= submit_tag("Search") %></searchbutton>
 							<% end %>
 						</li>
+						
 					</ul><!-- End Menu -->
 				</div> <!-- end of collapse navbar-collapse -->
 			</div> <!-- end of container -->

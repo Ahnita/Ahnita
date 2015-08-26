@@ -2,8 +2,15 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    user || User.new #guest user (not logged in)
-    can :manage, User, id: user.id
+    user ||= User.new #guest user (not logged in) <-- Removed the = sign before User.new, it worked.
+    if user.has_role? :admin
+        can :manage, :all
+        can :access, :rails_admin
+        can :dashboard
+    else
+        can :manage, Profile, :user_id => user_id
+    end
+
     # Define abilities for the passed in user here. For example:
     #
     #   user ||= User.new # guest user (not logged in)
