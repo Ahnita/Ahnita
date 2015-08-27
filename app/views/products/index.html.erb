@@ -12,7 +12,6 @@
       <th>Cinema ID</th>
       <th>Theater</th>
       <th>Theater ID</th>
-      <th>Seats</th>
       <th>Price</th>
       <th colspan="4"></th>
     </tr>
@@ -26,8 +25,7 @@
         <td><%= product.cinema %></td>
         <td><%= product.cinema_id %></td>
         <td><%= product.theaters %></td>
-        <td><%= product.theaters_id %></td>
-        <td><%= product.seats %></td>
+        <td><%= product.theater_id %></td>
         <td><%= product.movieprice %></td>
         <td class = "links"><%= link_to 'Show', product %></td>
         <td class = "links"><%= link_to 'Edit', edit_product_path(product) %></td>

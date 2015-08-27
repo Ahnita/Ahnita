@@ -1,0 +1,37 @@
+<%= form_for(@cinema) do |f| %>
+  <% if @cinema.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cinema.errors.count, "error") %> prohibited this cinema from being saved:</h2>
+
+      <ul>
+      <% @cinema.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :product_id %><br>
+    <%= f.text_field :product_id %>
+  </div>
+  <div class="field">
+    <%= f.label :cinema %><br>
+    <%= f.text_field :cinema %>
+  </div>
+  <div class="field">
+    <%= f.label :cinema_id %><br>
+    <%= f.number_field :cinema_id %>
+  </div>
+  <div class="field">
+    <%= f.label :theater %><br>
+    <%= f.text_field :theater %>
+  </div>
+  <div class="field">
+    <%= f.label :theater_id %><br>
+    <%= f.number_field :theater_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

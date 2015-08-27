@@ -1,0 +1,33 @@
+<%= form_for(@theater) do |f| %>
+  <% if @theater.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@theater.errors.count, "error") %> prohibited this theater from being saved:</h2>
+
+      <ul>
+      <% @theater.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :theaters %><br>
+    <%= f.text_field :theaters %>
+  </div>
+  <div class="field">
+    <%= f.label :theater_id %><br>
+    <%= f.text_field :theater_id %>
+  </div>
+  <div class="field">
+    <%= f.label :screening_id %><br>
+    <%= f.number_field :screening_id %>
+  </div>
+  <div class="field">
+    <%= f.label :seats %><br>
+    <%= f.number_field :seats %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

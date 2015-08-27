@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :screenings
+  resources :theaters
+  resources :cinemas
   devise_for :users, :path => '', :path_names => {:sign_in =>'login', :sign_out =>'logout'}
   resources :users
   get 'static_pages/landing_page'
