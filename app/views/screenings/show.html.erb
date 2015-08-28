@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Screening:</strong>
+  <%= @screening.screening %>
+</p>
+
+<p>
+  <strong>Screening:</strong>
+  <%= @screening.screening_id %>
+</p>
+
+<p>
+  <strong>Theater:</strong>
+  <%= @screening.theater_id %>
+</p>
+
+<%= link_to 'Edit', edit_screening_path(@screening) %> |
+<%= link_to 'Back', screenings_path %>

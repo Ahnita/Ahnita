@@ -4,17 +4,16 @@
 
 <table>
     <tr>
-      <th>Product</th>
+      <th>Movie</th>
       <th>Product_ID</th>
       <th>Screening</th>
       <th>Screening ID</th>
-      <th>Cinema</th>
+      <th>Your Cinema</th>
       <th>Cinema ID</th>
       <th>Theater</th>
       <th>Theater ID</th>
-      <th>Seats</th>
-      <th>Price</th>
-      <th colspan="4"></th>
+      <th>Total</th>
+      <th colspan="4"></th>  
     </tr>
     <% @products.each do |product| %>
       
@@ -26,9 +25,8 @@
         <td><%= product.cinema %></td>
         <td><%= product.cinema_id %></td>
         <td><%= product.theaters %></td>
-        <td><%= product.theaters_id %></td>
-        <td><%= product.seats %></td>
-        <td><%= product.movieprice %></td>
+        <td><%= product.theater_id %></td>
+        <td><%= product.total %></td>
         <td class = "links"><%= link_to 'Show', product %></td>
         <td class = "links"><%= link_to 'Edit', edit_product_path(product) %></td>
         <td class = "links"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
