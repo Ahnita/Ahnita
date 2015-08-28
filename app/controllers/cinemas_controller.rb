@@ -5,13 +5,13 @@ class CinemasController < ApplicationController
   # GET /cinemas.json
   def index
     @cinemas = Cinema.all
-    @theater = theater.where ("theater_id = ?", Cinema.first.id)
+    @theater = Theater.where("theater_id = ?", Cinema.first.id)
   end
 
   # GET /cinemas/1
   # GET /cinemas/1.json
   def show
-    @theater = theater.find_by("id = ?", params [:screening][:seats])
+    @theater = Theater.find_by("id = ?", params[:screening][:seats])
   end
 
   # GET /cinemas/new
