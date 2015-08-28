@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150828100337) do
+ActiveRecord::Schema.define(version: 20150828101431) do
 
   create_table "cinemas", force: :cascade do |t|
     t.string   "cinema"
@@ -31,9 +31,11 @@ ActiveRecord::Schema.define(version: 20150828100337) do
     t.integer "user_id"
     t.integer "product_id"
     t.float   "total"
+    t.integer "screening_id"
   end
 
   add_index "orders", ["product_id"], name: "index_orders_on_product_id"
+  add_index "orders", ["screening_id"], name: "index_orders_on_screening_id"
   add_index "orders", ["user_id"], name: "index_orders_on_user_id"
 
   create_table "products", force: :cascade do |t|

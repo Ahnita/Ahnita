@@ -1,5 +1,5 @@
 class Screening < ActiveRecord::Base
-  belongs_to :theaters
+  belongs_to :theater
   has_many :orders
 
   def screening_time (screening)
@@ -17,7 +17,12 @@ class Screening < ActiveRecord::Base
   	end
   end
 
+  def available_seats
+    theater_seats = theater.seats
+    taken_seats = orders.count
 
+    theater_seats - taken_seats
+  end
 
   #screening_time (datetime)
   #Eg Jaws in theater 2 of SM Magnolia at 9pm on 10/3/2015
