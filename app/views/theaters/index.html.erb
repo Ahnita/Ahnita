@@ -5,7 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Theaters</th>
+      <th>Theater Name</th>
       <th>Theater ID</th>
       <th>Screening ID</th>
       <th>Seats</th>
@@ -16,7 +16,7 @@
   <tbody>
     <% @theaters.each do |theater| %>
       <tr>
-        <td><%= theater.theaters %></td>
+        <td><%= theater.theater_name %></td>
         <td><%= theater.theater_id %></td>
         <td><%= theater.screening_id %></td>
         <td><%= theater.seats %></td>

@@ -15,6 +15,15 @@ class screening < ActiveRecord::Base
   			select :theater
   		end
   	end
+   
+  def available_seats
+
+    theater_seats = theater.seats
+    taken_seats = orders.count
+
+    theater_seats - taken seats 
+  end  
+
   end
 
 

@@ -5,13 +5,13 @@ class CinemasController < ApplicationController
   # GET /cinemas.json
   def index
     @cinemas = Cinema.all
-    @theater = theater.where ("theater_id = ?", Cinema.first.id)
+    @theater = Theater_name.where ("theater_id = ?", Cinema.first.id)
   end
 
   # GET /cinemas/1
   # GET /cinemas/1.json
   def show
-    @theater = theater.find_by("id = ?", params [:screening][:seats])
+    @theater = Theater_name.find_by("id = ?", params [:screening][:seats])
   end
 
   # GET /cinemas/new
@@ -71,6 +71,6 @@ class CinemasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cinema_params
-      params.require(:cinema).permit(:cinema, :cinema_id, :theater, :theater_id, :product_id)
+      params.require(:cinema).permit(:cinema, :cinema_id, :theater_name, :theater_id, :product_id)
     end
 end
