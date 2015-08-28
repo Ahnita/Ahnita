@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150827094000) do
+ActiveRecord::Schema.define(version: 20150828100337) do
 
   create_table "cinemas", force: :cascade do |t|
     t.string   "cinema"
@@ -40,12 +40,16 @@ ActiveRecord::Schema.define(version: 20150827094000) do
     t.string   "product"
     t.string   "cinema"
     t.string   "screening"
+    t.string   "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "theater"
     t.integer  "product_id"
     t.integer  "movieprice"
+    t.integer  "cinema_id"
   end
 
+  add_index "products", ["cinema_id"], name: "index_products_on_cinema_id"
   add_index "products", ["product_id"], name: "index_products_on_product_id"
 
   create_table "screenings", force: :cascade do |t|
@@ -65,6 +69,7 @@ ActiveRecord::Schema.define(version: 20150827094000) do
     t.integer  "seats"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "cinema_id"
   end
 
   add_index "theaters", ["screening_id"], name: "index_theaters_on_screening_id"
@@ -84,12 +89,10 @@ ActiveRecord::Schema.define(version: 20150827094000) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.string   "user_id"
     t.boolean  "admin",                  default: false, null: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  add_index "users", ["user_id"], name: "index_users_on_user_id", unique: true
 
 end
