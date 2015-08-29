@@ -1,4 +1,4 @@
-class theater < ActiveRecord::Base
+class Theater < ActiveRecord::Base
   belongs_to :cinema
   has_many :screenings
  
