@@ -24,30 +24,6 @@ Rails.application.routes.draw do
 
   get 'static_pages/thank_you'
 
-  get 'products/index'
-
-  get 'products/new'
-
-  get 'products/create'
-
-  post 'products/create'
-
-  get 'products/show'
-
-  resources :orders
-
-  get 'orders/index'
-
-  get 'orders/new'
-
-  get 'orders/create'
-
-   get 'orders/show'
-
-  post 'static_pages/thank_you'
-
-
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
