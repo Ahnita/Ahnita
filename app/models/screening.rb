@@ -1,4 +1,4 @@
-class screening < ActiveRecord::Base
+class Screening < ActiveRecord::Base
   belongs_to :theaters
   has_many :orders
 
