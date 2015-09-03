@@ -5,6 +5,10 @@ class Product < ActiveRecord::Base
 
   validates :product, presence: true
 
+  def selected_prdouct
+  	selected_product = y
+  end
+
 
 end
  
