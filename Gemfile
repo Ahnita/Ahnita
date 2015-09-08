@@ -31,6 +31,9 @@ gem 'devise_zxcvbn'
 #CanCanCan is an updated version of CanCan, a great Authorization gem by Ryan Bates (of RailsCasts fame)
 gem 'cancancan'
 
+#ratyrate gem
+gem 'ratyrate'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -48,6 +51,7 @@ end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'rspec-rails', '~> 3.0'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
@@ -58,3 +62,6 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+#%w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
+  #gem lib, :git => "git://github.com/rspec/#{lib}.git", :branch => 'master'
+#end

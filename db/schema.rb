@@ -11,15 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150827094000) do
+ActiveRecord::Schema.define(version: 20150831025755) do
 
   create_table "cinemas", force: :cascade do |t|
     t.string   "cinema"
     t.integer  "cinema_id"
-    t.string   "theater"
+    t.string   "theater_name"
     t.integer  "theater_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.integer  "product_id"
   end
 
@@ -27,10 +27,23 @@ ActiveRecord::Schema.define(version: 20150827094000) do
   add_index "cinemas", ["product_id"], name: "index_cinemas_on_product_id"
   add_index "cinemas", ["theater_id"], name: "index_cinemas_on_theater_id"
 
+  create_table "comments", force: :cascade do |t|
+    t.integer  "user_id"
+    t.text     "body"
+    t.integer  "rating"
+    t.integer  "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "comments", ["product_id"], name: "index_comments_on_product_id"
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
+
   create_table "orders", force: :cascade do |t|
     t.integer "user_id"
     t.integer "product_id"
     t.float   "total"
+    t.integer "screening_id"
   end
 
   add_index "orders", ["product_id"], name: "index_orders_on_product_id"
@@ -49,7 +62,7 @@ ActiveRecord::Schema.define(version: 20150827094000) do
   add_index "products", ["product_id"], name: "index_products_on_product_id"
 
   create_table "screenings", force: :cascade do |t|
-    t.datetime "screening"
+    t.string   "screening"
     t.integer  "screening_id"
     t.integer  "theater_id"
     t.datetime "created_at",   null: false
@@ -59,7 +72,7 @@ ActiveRecord::Schema.define(version: 20150827094000) do
   add_index "screenings", ["screening_id"], name: "index_screenings_on_screening_id"
 
   create_table "theaters", force: :cascade do |t|
-    t.string   "theaters"
+    t.string   "theater_name"
     t.string   "theater_id"
     t.integer  "screening_id"
     t.integer  "seats"
