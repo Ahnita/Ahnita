@@ -7,6 +7,6 @@ class UserMailer < ApplicationMailer
   @name = name
     mail(:from => email, 
         :to => 'ahn.bustamante@gmail.com', 
-        :subject => "A new contact form message from #{name}")
+        :subject => "A new message from #{name}")
   end
 end
