@@ -84,46 +84,25 @@
 	<p class="alert"><%= alert %></p>
 
 		<div class = "filters">
+			<%= form_for :order, url: {action: "show"}, html: {method: "get"} do |f| %>
 			<div class = "col-md-2">
 				<div class = "select-style">
-					<select id = "pelikula">
-						<option value>Select Movie</option>
-						<option value ="m1"><%= link_to "Johnny English" %></option>
-						<option value ="m2"><%= link_to "Black Swan"%></option>
-						<option value ="m3"><%= link_to "The Broken" %></option>
-						<option value ="m4"><%= link_to "La Grande Bellezza"%></option>
-					</select>
+					<%= f.select :product_id, options_for_select(@products.collect {|product|[product.name.titleize, product.id]}, 1), {}, {id: 'products_select'} %>
 				</div> <!-- end of select-style -->
 			</div> <!-- end of col -->
 			<div class = "col-md-2">
 				<div class = "select-style">
-					<select id = "sinehan">
-						<option value>Select Cinema</option>
-						<option value = "c1">Robinsons Magnolia</option>
-						<option value = "c2">SM IMAX Theatre</option>
-						<option value = "c3">Greenbelt 1 Cinemas</option>
-						<option value = "c4">Bonifacion High Street Cinema</option>
-					</select>
+					<%= f.select :cinema_id, options_for_select(@cinemas.collect {|cinema|[cinema.name.titleize, cinema.id]}, 1), {}, {id: 'cinemas_select'} %>
 				</div> <!-- end of select-style -->
 			</div> <!-- end of col -->
 			<div class = "col-md-2">
 				<div class = "select-style">
-					<select id = "kelan">
-						<option value><h3>Select Screening<span class="glyphicon glyphicon-chevron-down"></span></h3></option>
-						<option value = "s1">8 / 01 / 2015 10:00</option>
-						<option value = "s2">8 / 02 / 2015 12:00</option>
-						<option value = "s3">8 / 03 / 2015 14:00</option>
-						<option value = "s4">8 / 04 / 2015 16:00</option>
-					</select>
+					<%= f.select :screening_id, options_for_select(@screening.collect {|screening|[screening.name.titleize, screening.id]}, 1), {}, {id: 'screenings_select'} %>
 				</div> <!-- end of select-style -->
 			</div> <!-- end of col -->
 			<div class = "col-md-2">
 				<div class = "select-style">
-					<select id = "teatro">
-						<option value>Select Theater </option>
-						<option value = "T1">Theater 1</option>
-						<option value = "T2">Theater 2</option>
-					</select>
+					<%= f.select :theater_id, options_for_select(@theater.collect {|theater|[theater.name.titleize, theater.id]}, 1), {}, {id: 'theater_select'} %>
 				</div> <!-- end of select-style -->
 			</div> <!-- end of col -->
 			<div class = "col-md-3">
