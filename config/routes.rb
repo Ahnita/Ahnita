@@ -44,7 +44,7 @@ Rails.application.routes.draw do
 
   get 'orders/create'
 
-   get 'orders/show'
+  get 'orders/show'
 
   post 'static_pages/thank_you'
 
