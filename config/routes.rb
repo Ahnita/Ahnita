@@ -46,6 +46,7 @@ Rails.application.routes.draw do
 
   post 'static_pages/thank_you'
 
+  get 'static_pages/update_cinemas', as 'update_cinemas'
 
 
 

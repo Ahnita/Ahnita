@@ -1,8 +1,12 @@
 
 
 <p>
-  This is a test
+  <%= @product.name.titelize %>
+  <%= @cinema.name.titelize %>
+  <%= @screening.name.titelize %>
+  <%= @theater.name.titelize %>
 </p>
+<p><%= link_to 'Go Back', index_path %></p>
 
 
 
